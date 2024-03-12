@@ -1,28 +1,52 @@
 .portada {
     margin-top: 2.5rem;
+    min-height: 43rem;
+    position: relative;
+}
 
-    &__contenedor {
-        position: absolute;
-        //top: 2.5rem;
-
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
+.contenedorUno{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/teclado_portada.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 20rem;
+    margin: 0rem 0 3rem 0;
 
     &__heading {
+        color: #fff;
+        font-family: Roboto Slab, serif;
+        font-size: 2.2rem;
+        font-weight: 700;
         position: absolute;
-        background-color: rgb(89 83 83 / 18%);
-        padding: 1rem;
+        width: 37rem;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.contenedorDos{
+    display: flex;
+    align-items: center;
+    background-image: url(../img/teclado1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 20rem;
+    margin: 3rem 0 0 0;
+
+    &__heading {
+        background-color: hsl(0deg 3% 73% / 59%);
+        color: #fff;
+        font-family: Roboto Slab, serif;
+        font-size: 2.2rem;
+        font-weight: 500;
         margin: 2rem;
-        color: white;
-        width: 28rem;
-        font-size: 1.2rem;
-        top: 28rem;
-        font-family: "Roboto Slab", serif;
-        font-weight: 300;
+        padding: 1rem;
+        position: absolute;
+        width: 25rem;
 
         .cta {
             border: none;
@@ -77,17 +101,5 @@
             transform: scaleX(1);
             transform-origin: bottom left;
         }
-    }
-
-    &__producto{
-        top:28rem;
-        position: relative;
-        animation-name: example;
-        animation-duration: 4s;
-    }
-
-    @keyframes example {
-        0%   { left:-35rem; top:0rem;}
-        100% { left:0px; top:0rem;}
     }
 }

@@ -1,4 +1,8 @@
 .header{
+    &__logo img{
+        display: inline;
+    }
+
     &__logo, &__nav{
         text-align: center;
     }
