@@ -33,10 +33,22 @@
         border-radius: 5px 5px 0 0;
         max-width: 100%;
         height: 100%;
+
+        button{
+            border-radius: 100%;
+            height: 50px;
+            width: 50px;
+            margin: 1rem;
+            border: none;
+            //opacity: 0;
+            //background-color: v.$blanco;
+            //color: v.$negro;
+        }
+        
         
     }
 
-    @for $i from 1 through 8 {
+    @for $i from 1 through 12 {
         //se va a ejecutar 6 veces
         $imagen: "../img/articulo" + $i + ".webp";
         &:nth-child(#{$i}) &__imagen {
@@ -46,9 +58,36 @@
         $imagen: "../img/articulo" + $i + "_sub.webp";
         &:nth-child(#{$i}) &__imagen:hover {
             background-image: url($imagen);
-            transition: background-image 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+
+            /*.button_1{
+                opacity: 1;
+                transition: all 0.5s ease-in-out;
+                cursor: pointer;
+
+                &:hover{
+                    opacity: 0;
+                }
+            } */           
         }
     }
+    
+    .button_1 {
+        opacity: 1; /* Hidden on hover */
+    }
+
+    .button_1:hover {
+        background-color: white;
+        color: white;
+        background: black;
+    }
+
+
+
+
+
+
+
 
     &__heading{
         padding: 1rem;
