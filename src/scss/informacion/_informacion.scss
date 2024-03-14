@@ -1,0 +1,31 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.informacion{
+    margin: 5rem auto;
+    max-width: 120rem;
+    //width: 90%;
+    border-top: 1px solid #cac3c39e;
+
+    &__grid{
+        padding: 3rem 0 0;
+
+        @include m.grid(1, 2rem);
+
+        @include m.tablet {
+            @include m.grid(3, 2rem);
+        }
+
+        @include m.desktop {
+            @include m.grid(3, 2rem);
+        }
+    }
+
+    &__heading{
+        font-size: 2rem;
+    }
+
+    &__dato{
+        font-size: 1.2rem;
+    }
+}
