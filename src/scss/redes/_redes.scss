@@ -1,10 +1,10 @@
 @use "base/variables" as v;
 
-.espacio{
+.redes{
     margin: 0;
     background-color: v.$negro;
 
-    &__redes{
+    &__contenedor{
         padding: 0.5rem;
         display: flex;
         place-items: center;
