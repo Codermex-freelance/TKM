@@ -2,7 +2,6 @@
 
 .galeria{
     &__heading{
-        text-align: center;
         padding: 1rem;
         border-bottom: 1px solid hsla(0, 3%, 73%, .59);
         font-size: 2.2rem;
@@ -15,11 +14,9 @@
     }
 
     &__grid{
-        /*display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;  */
         margin: 1rem; 
         padding: 0 3rem;
+
         @include m.grid(1,2rem);
         
         @include m.tablet{
@@ -36,7 +33,6 @@
             img{
                 height: 30rem;
                 width: 62rem;
-                //width: 30rem;
                 object-fit: cover;
             }
     

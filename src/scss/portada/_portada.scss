@@ -1,3 +1,5 @@
+@use "base/variables" as v;
+
 .portada {
     margin-top: 2.5rem;
     min-height: 43rem;
@@ -8,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/teclado_portada.webp);
+    //background-image: url(../img/teclado_portada.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -16,14 +18,12 @@
     margin: 0rem 0 3rem 0;
 
     &__heading {
-        color: #fff;
-        font-family: Roboto Slab, serif;
+        color: v.$blanco;
+        font-family: v.$fuentePrincipal;
         font-size: 2.2rem;
-        font-weight: 700;
         position: absolute;
         width: 37rem;
         margin: 0;
-        text-align: center;
     }
 }
 
@@ -39,10 +39,9 @@
 
     &__heading {
         background-color: hsl(0deg 3% 73% / 59%);
-        color: #fff;
-        font-family: Roboto Slab, serif;
+        color: v.$blanco;
+        font-family: v.$fuentePrincipal;
         font-size: 2.2rem;
-        font-weight: 500;
         margin: 2rem;
         padding: 1rem;
         position: absolute;
@@ -80,7 +79,7 @@
 
         .hover-underline-animation {
             position: relative;
-            color: black;
+            color: v.$negro;
             padding-bottom: 20px;
         }
 
@@ -92,7 +91,7 @@
             height: 2px;
             bottom: 0;
             left: 0;
-            background-color: #000000;
+            background-color: v.$negro;
             transform-origin: bottom right;
             transition: transform 0.25s ease-out;
         }

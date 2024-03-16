@@ -2,11 +2,10 @@
 @use "base/variables" as v;
 
 .footer {
-    background-color: v.$terciario;
+    background-color: #222;
 
     &__contenedor {
         margin: 3rem 3rem 0;
-        ;
         padding: 2rem;
     }
 
@@ -46,11 +45,10 @@
     }
 
     &__frase {
-        background-color: #252525;
-        color: #c1b8b8;
+        background-color: v.$cuaternario;
+        color: v.$quinario;
         font-size: 10px;
         padding: 10px;
-        font-weight: 500;
     }
 }
 
