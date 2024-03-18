@@ -132,6 +132,34 @@
 
     &__info{
         margin: 3rem 0;
+
+
+        .inline-flex{
+            display: inline-flex;
+        }
+        .t60 [data-selected=true]{
+            
+            background-color: #000;
+            border-color: #000;
+            color: #bdbdbd;
+            opacity: .6;
+            overflow: hidden;
+            position: relative;
+
+            border: 1px solid #bdbdbd;
+            border-radius: 5px;
+            font-size: 18px;
+            height: 45px;
+            margin: 5px;
+            min-width: 45px;
+            padding: 0 10px;
+            transition: all .25s;
+
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+        }
     }
     
 }
