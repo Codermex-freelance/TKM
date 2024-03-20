@@ -1,10 +1,11 @@
 const teclado = document.querySelector('.articulo__contenido');
+const contenedorTeclado = document.querySelector('#probando tbody');
 let tecladoMostrar = [];
 
 cargarEventListeners();
 function cargarEventListeners(){
   //teclado.addEventListener('click', agregarTeclado);
-  
+
   const articulos = document.querySelectorAll('.articulo__contenido');
 
   articulos.forEach(articulo => {
@@ -20,6 +21,8 @@ function cargarEventListeners(){
 
 //FUNCIONES
 function agregarTeclado(e){
+  limpiarTeclado();
+
   //e.preventDefault();
   if(e.target.classList.contains('articulo__imagen')){//Valida que solo se ejecute cuando toque esa clase
       const tecladoSeleecionado = e.target.parentElement.parentElement;//accedemos a todo el div que tiene el contenido del curso
@@ -40,9 +43,23 @@ function leerDatosTeclados(teclado){
   }else{
     tecladoMostrar = [...tecladoMostrar, infoTeclado];
   }
+  nombreURL(infoTeclado.nombre);
+  //mostrarTeclado();
+
+  
   sincronizarStorage();
+}
+
+function nombreURL(producto){
+  history.pushState({}, '', `art_teclado.html?${producto}`);
 }
 
 function sincronizarStorage(){
     localStorage.setItem('teclado', JSON.stringify(tecladoMostrar));
 }
+
+function limpiarTeclado(){
+  tecladoMostrar = [];
+}
+
+
