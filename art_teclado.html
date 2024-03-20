@@ -29,10 +29,8 @@
         </div>
     </header>
     <section class="teclado">
-        <div class="teclado__grid">
-            <img src="build/img/articulo1.webp" alt="">
-            <img src="build/img/articulo1_sub.webp" alt="">
-            <img src="build/img/articulo1_sub_1.webp" alt="">
+        <div class="teclado__grid" id="probando">
+            
         </div>
         <div class="teclado__info text-center" id="informacion__teclado">
             
@@ -47,6 +45,14 @@
         const fila = JSON.parse(filaJSON);
         const nombreTeclado = fila[0].nombre;
         const precioTeclado = fila[0].precio;
+        const idTeclado = fila[0].id;
+
+        const contenidoHTMLimg = `
+                                <img src="build/img/articulo${idTeclado}.webp" alt="">
+                                <img src="build/img/articulo${idTeclado}_sub.webp" alt="">
+                                <img src="build/img/articulo${idTeclado}_sub_${idTeclado}.webp" alt="">
+                                `
+        document.querySelector('#probando').innerHTML = contenidoHTMLimg;
 
         const contenidoHTML = `
                             <h1 class="teclado__heading">${nombreTeclado}</h1>

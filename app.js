@@ -1,10 +1,6 @@
 const teclado = document.querySelector('.articulo__contenido');
 const contenedorTeclado = document.querySelector('#probando tbody');
 
-const elemento = document.querySelector(".articulo__imagen");
-const estilo = window.getComputedStyle(elemento);
-const backgroundImage = estilo.backgroundImage;
-
 let tecladoMostrar = [];
 
 cargarEventListeners();
@@ -37,7 +33,6 @@ function leerDatosTeclados(teclado){
   const infoTeclado = {
     nombre: teclado.querySelector('h2').textContent,
     precio: teclado.querySelector('h3').textContent,
-    imagen: backgroundImage,
     id: teclado.querySelector('a').getAttribute('data-id')
   }
   //some = permite iterarsobre un arreglo de objetos y verificar si un elemento existe en el
