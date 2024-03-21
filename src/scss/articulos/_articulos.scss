@@ -128,38 +128,73 @@
 
     &__grid{
         @include m.grid(3, 0);
+        margin: 1.5rem 0;
     }
 
     &__info{
         margin: 3rem 0;
 
-
-        .inline-flex{
-            display: inline-flex;
+        .informacionExtra{
+            font-size: 15px;
+            color: v.$secundario;
         }
-        .t60 [data-selected=true]{
-            
-            background-color: #000;
-            border-color: #000;
-            color: #bdbdbd;
-            opacity: .6;
-            overflow: hidden;
-            position: relative;
 
-            border: 1px solid #bdbdbd;
-            border-radius: 5px;
-            font-size: 18px;
-            height: 45px;
-            margin: 5px;
-            min-width: 45px;
-            padding: 0 10px;
-            transition: all .25s;
-
-            align-items: center;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
+        h4{
+            text-transform: uppercase;
+            font-size: 15px;
         }
     }
-    
+
+    &__heading{
+        font-size: 30px;  
+        font-weight: 700; 
+        &:hover{
+            color: #756f6f;
+        }
+    }
+
+    &__precio{
+        font-weight: 900;
+    }
+}
+
+.tecladoImagen:hover{
+    transform: scale(1.1, 1.1);
+}
+
+.tecladoImagen:not(:hover){
+    opacity: 0.5;
+}
+
+.tecladoImagen:nth-child(2){
+    opacity: 1;
+}
+
+.switches{
+
+    &__grid{
+        @include m.grid(4, 1rem);
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 810px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 15px;
+        align-items: center;
+    }
+
+    &__switch{
+        border: 1px solid #c1b8b8;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        cursor: pointer;
+
+        &:hover{
+            border: 1px solid v.$negro;
+        }
+
+        &:active{
+            background-color:#c1b8b8 ;
+        }
+    }
 }
