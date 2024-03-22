@@ -26,8 +26,6 @@ document.querySelector('#tecladoInformacion').innerHTML = contenidoHTML + docume
 const labels = document.querySelectorAll(".switches__switch");
 
 labels.forEach(label => {
-  //label.style.backgroundColor = "initial"; // Color base inicial
-
     label.addEventListener("click", () => {
         labels.forEach(label => {
             label.style.backgroundColor = "initial"; // Restablece el color base en los demás
@@ -35,5 +33,20 @@ labels.forEach(label => {
         });
         label.style.backgroundColor = "black"; // Color diferente para el seleccionado
         label.style.color = "white"; // Color diferente para el seleccionado
+    });
+});
+
+
+const buttom_fav = document.querySelectorAll(".favorito");
+
+buttom_fav.forEach(buttom => {
+    buttom.addEventListener("click", () => {
+        if(buttom.style.backgroundColor === "black"){
+            buttom.style.backgroundColor = "white"; // Restablece el color base en los demás
+            buttom.style.fill = "black";
+        }else{
+            buttom.style.backgroundColor = "black"; // Color diferente para el seleccionado
+            buttom.style.fill = "white"; // Color diferente para el seleccionado
+        }
     });
 });
