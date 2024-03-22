@@ -154,20 +154,43 @@
     }
 
     &__precio{
+        margin: 1rem;
         font-weight: 900;
+    }
+
+    &__descuento{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 20rem;
+        font-size: 15px;
+        color: rgb(238, 65, 65);
+        border: 1px solid rgb(246, 90, 90);
+        padding: 0.5rem;
+    
+        span{
+            color: #da4545;
+            font-weight: 700;
+        }
     }
 }
 
-.tecladoImagen:hover{
-    transform: scale(1.1, 1.1);
-}
+.tecladoImagen{
+    
+    &:hover{
+        transform: scale(1.1, 1.1);
+    }
 
-.tecladoImagen:not(:hover){
-    opacity: 0.5;
-}
+    &:not(:hover){
+        opacity: 0.5;
+    }
 
-.tecladoImagen:nth-child(2){
-    opacity: 1;
+    &:nth-child(2){
+        opacity: 1;
+    }
 }
 
 .switches{
@@ -186,15 +209,34 @@
     &__switch{
         border: 1px solid #c1b8b8;
         padding: 0.5rem;
-        border-radius: 1rem;
+        border-radius: 0.5rem;
         cursor: pointer;
 
         &:hover{
             border: 1px solid v.$negro;
         }
 
-        &:active{
-            background-color:#c1b8b8 ;
+        &[data-selected=true]{
+                background-color:#000000 ;
+            
+        }
+    }
+}
+
+.medio_de_pago{
+    display: flex;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem;
+    max-width: 4%;
+
+    img{
+        border: 1px solid rgb(115, 115, 115);
+        margin: 0 0.3rem;
+
+        &:nth-last-of-type(1){
+            border: none;
         }
     }
 }

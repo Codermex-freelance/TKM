@@ -28,42 +28,26 @@
         </div>
     </header>
     <section class="teclado">
-        <div class="teclado__grid" id="tecladoImg">
-        </div>
+        <div class="teclado__grid" id="tecladoImg"></div>
         <div class="teclado__info text-center" id="tecladoInformacion">
+            <div class="medio_de_pago">
+                <img class="tarjeta" src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" alt="visa">
+                <img class="tarjeta" src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" alt="visa">
+                <img class="tarjeta" src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" alt="visa">
+            </div>
             <P class="informacionExtra">Impuesto incluido. Los gastos de envío se calculan en la pantalla de pago.</P>
             <h4>Switches</h4>
             <div class="switches__grid">
-                <label class="switches__switch" for="probando">Gateron Brown</label>
-                <label class="switches__switch" for="probando">Gateron Red</label>
-                <label class="switches__switch" for="probando">Gateron Blue</label>
-                <label class="switches__switch" for="probando">Outemu Silent Peach V3</label>
-                <label class="switches__switch" for="probando">WS Red</label>
-                <label class="switches__switch" for="probando">WS Silent Tactile</label>
-                <label class="switches__switch" for="probando">Outemu Blue SMD</label>
+                <label class="switches__switch">Gateron Brown</label>
+                <label class="switches__switch">Gateron Red</label>
+                <label class="switches__switch">Gateron Blue</label>
+                <label class="switches__switch">Outemu Silent Peach V3</label>
+                <label class="switches__switch">WS Red</label>
+                <label class="switches__switch">WS Silent Tactile</label>
+                <label class="switches__switch">Outemu Blue SMD</label>
             </div>
         </div>
     </section>
-    <script>
-        const claveFila = "teclado";
-        const filaJSON = localStorage.getItem(claveFila);
-        const fila = JSON.parse(filaJSON);
-        const nombreTeclado = fila[0].nombre;
-        const precioTeclado = fila[0].precio;
-        const idTeclado = fila[0].id;
-
-        const contenidoHTMLimg = `
-                                <img class="tecladoImagen" src="build/img/articulo${idTeclado}_sub.webp" alt="${nombreTeclado}">
-                                <img class="tecladoImagen" src="build/img/articulo${idTeclado}.webp" alt="${nombreTeclado}">
-                                <img class="tecladoImagen" src="build/img/articulo${idTeclado}_sub_${idTeclado}.webp" alt="${nombreTeclado}">
-                                `
-        document.querySelector('#tecladoImg').innerHTML = contenidoHTMLimg;
-
-        const contenidoHTML = `
-                            <h1 class="teclado__heading">${nombreTeclado}</h1>
-                            <p class="teclado__precio">${precioTeclado} USD</p>
-                            `
-        document.querySelector('#tecladoInformacion').innerHTML = contenidoHTML + document.querySelector('#tecladoInformacion').innerHTML;
-    </script>
+    <script src="/src/js/info_app.js"></script>
 </body>
 </html>
