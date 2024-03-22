@@ -28,6 +28,10 @@ img {
     text-align: center;
 }
 
+.f-w-400{
+    font-weight: 400;
+}
+
 .f-w-500{
     font-weight: 500;
 }
@@ -36,15 +40,14 @@ img {
     font-weight: 700;
 }
 
+.f-w-900{
+    font-weight: 900;
+}
+
 .bg-img-inicio{
     background-image: url(../img/teclado_portada.webp);
 }
 
 .bg-img-teclado{
     background-image: url(../img/teclado_portada_2.webp);
-}
-
-.grid_1{
-    display: grid;
-    
 }

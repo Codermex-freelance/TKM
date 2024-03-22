@@ -16,9 +16,9 @@ const contenidoHTMLimg = `
                         `
 document.querySelector('#tecladoImg').innerHTML = contenidoHTMLimg;
 const contenidoHTML = `
-                    <h1 class="teclado__heading">${nombreTeclado}</h1>
-                    <p class="teclado__precio">${precioTeclado}</p>
-                    <label class="teclado__descuento"><span> 3 </span>  cuotas sin interes de <span>$${precioDescuento.toFixed(2)}</span> </label>
+                    <h1 class="teclado__heading f-w-700">${nombreTeclado}</h1>
+                    <p class="teclado__precio f-w-900">${precioTeclado}</p>
+                    <label class="teclado__descuento"><span class="f-w-700"> 3 </span>  cuotas sin interes de <span class="f-w-700">$${precioDescuento.toFixed(2)}</span> </label>
                     `
 document.querySelector('#tecladoInformacion').innerHTML = contenidoHTML + document.querySelector('#tecladoInformacion').innerHTML;
 
@@ -26,7 +26,7 @@ document.querySelector('#tecladoInformacion').innerHTML = contenidoHTML + docume
 const labels = document.querySelectorAll(".switches__switch");
 
 labels.forEach(label => {
-  label.style.backgroundColor = "initial"; // Color base inicial
+  //label.style.backgroundColor = "initial"; // Color base inicial
 
     label.addEventListener("click", () => {
         labels.forEach(label => {
