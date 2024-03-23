@@ -1,23 +1,23 @@
 @use "base/mixins" as m;
 @use "base/variables" as v;
 
-.articulos{
+.articulos {
     cursor: pointer;
 
-    &__heading{
+    &__heading {
         padding: 1rem;
         font-size: 2.2rem;
         text-transform: uppercase;
         border-bottom: 1px solid hsla(0, 3%, 73%, .59);
         margin: 2rem 2rem;
-        
-        @include m.desktop{
+
+        @include m.desktop {
             margin: 2rem 30rem;
         }
-        
+
     }
 
-    &__grid{
+    &__grid {
         //display: grid;
         //grid-template-columns: repeat(4, 1fr);
         //gap: 2rem;  
@@ -33,11 +33,11 @@
         }
     }
 
-    &__division{
+    &__division {
         display: flex;
         justify-content: flex-end;
 
-        .btn__division{
+        .btn__division {
             border: 0px;
             background-color: #dcdcdc;
             margin: 5px;
@@ -46,22 +46,22 @@
             height: 36px;
             cursor: pointer;
 
-            &:hover{
+            &:hover {
                 background-color: v.$negro;
                 color: v.$blanco;
             }
         }
-    } 
+    }
 }
 
-.articulo{
-    
-    &__contenido{
+.articulo {
+
+    &__contenido {
         margin: 0;
         position: relative;
     }
 
-    &__imagen{
+    &__imagen {
         aspect-ratio: 8/3.7;
         background-size: 100%;
         background-position: center;
@@ -71,7 +71,7 @@
         max-width: 100%;
         height: 100%;
 
-        button{
+        button {
             border-radius: 100%;
             height: 50px;
             width: 50px;
@@ -85,17 +85,21 @@
     @for $i from 1 through 12 {
         //se va a ejecutar 6 veces
         $imagen: "../img/articulo" + $i + ".webp";
+
         &:nth-child(#{$i}) &__imagen {
-        background-image: url($imagen);
-        transition: background-image 0.5s ease-in-out;
+            background-image: url($imagen);
+            transition: background-image 0.5s ease-in-out;
         }
+
         $imagen: "../img/articulo" + $i + "_sub.webp";
+
         &:nth-child(#{$i}) &__imagen:hover {
             background-image: url($imagen);
             transition: all 0.5s ease-in-out;
+
             .button_1 {
                 opacity: 1;
-            }      
+            }
         }
     }
 
@@ -106,60 +110,58 @@
         transition: all 0.5s ease-in-out;
     }
 
-    &__heading{
+    &__heading {
         padding: 1rem;
-        font-size: 16px;  
-        font-weight: 500; 
-        &:hover{
+        font-size: 16px;
+        font-weight: 500;
+
+        &:hover {
             color: #756f6f;
         }
     }
 
-    &__precio{
+    &__precio {
         font-size: 14px;
         color: v.$negro;
     }
-    
+
 }
 
-.teclado{
+.teclado {
     margin: 1rem 0;
 
-    &__grid{
+    &__grid {
         @include m.grid(3, 0);
         margin: 1.5rem 0;
     }
 
-    &__info{
+    &__info {
         margin: 3rem 0;
 
-        .informacionExtra{
+        .informacionExtra {
             font-size: 15px;
             color: v.$secundario;
         }
-
-        h4{
-            text-transform: uppercase;
-            font-size: 15px;
-        }
     }
 
-    &__heading{
-        font-size: 30px;  
-        &:hover{
+    &__heading {
+        font-size: 30px;
+
+        &:hover {
             color: #756f6f;
         }
-        &-cnt{
+
+        &-cnt {
             margin: 1rem 0;
             font-size: 15px;
         }
     }
 
-    &__precio{
+    &__precio {
         margin: 1rem;
     }
 
-    &__descuento{
+    &__descuento {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -171,24 +173,27 @@
         color: rgb(238, 65, 65);
         border: 1px solid rgb(246, 90, 90);
         padding: 0.5rem;
-    
-        span{
+
+        span {
             color: #da4545;
         }
     }
 
-    &__opciones{
+    &__opciones {
         display: flex;
         justify-content: center;
         font-size: 15px;
+        max-width: 42rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    &__cantidad{
+    &__cantidad {
         display: flex;
-        padding: 0 1rem;
+        padding-right: 1rem;
 
-        .btn{
-            &__disminucion{
+        .btn {
+            &__disminucion {
                 border-right: 0;
                 border-top: 1px solid rgb(129, 126, 126);
                 border-bottom: 1px solid rgb(129, 126, 126);
@@ -200,8 +205,8 @@
                 background-color: #f9f9f9;
                 cursor: pointer;
             }
-    
-            &__cantidad{
+
+            &__cantidad {
                 width: 4rem;
                 border-left: 0;
                 border-right: 0;
@@ -210,12 +215,12 @@
                 padding: 5px;
                 background-color: #f9f9f9;
 
-                &:focus-visible{
-                    outline: none;//le saca el color del "border" al darle clic al input
+                &:focus-visible {
+                    outline: none; //le saca el color del "border" al darle clic al input
                 }
             }
-    
-            &__aumento{
+
+            &__aumento {
                 border-left: 0;
                 border-top: 1px solid rgb(129, 126, 126);
                 border-bottom: 1px solid rgb(129, 126, 126);
@@ -227,12 +232,12 @@
                 background-color: #f9f9f9;
                 cursor: pointer;
             }
-        }  
+        }
     }
 
-    &__carrito{
+    &__carrito {
 
-        .carrito{
+        .carrito {
             padding: 7px;
             width: 30rem;
             background-color: v.$negro;
@@ -242,10 +247,10 @@
         }
     }
 
-    &__favoritos{
+    &__favoritos {
         margin-left: .5rem;
-        
-        .favorito{
+
+        .favorito {
             border-radius: 100%;
             display: flex;
             height: 35px;
@@ -255,12 +260,12 @@
             color: v.$negro;
             cursor: pointer;
 
-            svg{
+            svg {
                 height: 30px;
                 width: 30px;
             }
 
-            &:hover{
+            &:hover {
                 transform: scale(1.1);
                 transition: all 0.5s ease-in-out;
             }
@@ -268,25 +273,30 @@
     }
 }
 
-.tecladoImagen{
+.tecladoImagen {
     transition: all 0.5s ease-in-out;
-    &:hover{
+
+    &:hover {
         z-index: 1;
         transform: scale(1.1, 1.1);
     }
 
-    &:not(:hover){
+    &:not(:hover) {
         opacity: 0.5;
     }
 
-    &:nth-child(2){
+    &:nth-child(2) {
         opacity: 1;
     }
 }
 
-.switches{
+.switches {
+    &__heading {
+        text-transform: uppercase;
+        font-size: 15px;
+    }
 
-    &__grid{
+    &__grid {
         @include m.grid(4, 1rem);
         margin-left: auto;
         margin-right: auto;
@@ -297,24 +307,24 @@
         align-items: center;
     }
 
-    &__switch{
+    &__switch {
         border: 1px solid #c1b8b8;
         padding: 0.5rem;
         border-radius: 0.5rem;
         cursor: pointer;
 
-        &:hover{
+        &:hover {
             border: 1px solid v.$negro;
         }
 
-        &:nth-child(1){
+        &:nth-child(1) {
             background-color: black;
             color: v.$blanco;
         }
     }
 }
 
-.medio_de_pago{
+.medio_de_pago {
     display: flex;
     justify-content: space-around;
     margin-left: auto;
@@ -322,12 +332,85 @@
     padding: 0.5rem;
     max-width: 4%;
 
-    img{
+    img {
         border: 1px solid rgb(115, 115, 115);
         margin: 0 0.3rem;
 
-        &:nth-last-of-type(1){
+        &:nth-last-of-type(1) {
             border: none;
+        }
+    }
+}
+
+.reseñas{
+    border-top: 1px solid #dcdcdc;
+    margin-top: 4rem;
+    padding-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 42rem;
+
+    &__heading{
+        font-size: 20px;
+    }
+
+    &__contenido{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .rating{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding-right: 4rem;
+        border-right: 1px solid #dcdcdc;
+
+        &:not(:checked)>input {
+            position: absolute;
+            appearance: none;
+        }
+
+        &:not(:checked)>label {
+            float: right;
+            cursor: pointer;
+            font-size: 30px;
+            color: #666;
+        }
+
+        &:not(:checked)>label:before {
+            content: '★';
+        }
+
+        &>input:checked+label:hover,
+        &>input:checked+label:hover~label,
+        &>input:checked~label:hover,
+        &>input:checked~label:hover~label,
+        &>label:hover~input:checked~label {
+            color: #e58e09;
+        }
+
+        &:not(:checked)>label:hover,
+        &:not(:checked)>label:hover~label {
+            color: #ff9e0b;
+        }
+
+        &>input:checked~label {
+            color: #ffa723;
+        }
+    }
+    
+    &__boton{
+        margin-left: 2rem;
+        padding: 6px;
+        
+        button{
+            font-size: 15px;
+            padding: 6px 56px;
+            background-color: v.$negro;
+            color: v.$blanco;
+            border-radius: 5px;
+            cursor: pointer;
         }
     }
 }

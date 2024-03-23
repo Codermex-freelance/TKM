@@ -47,6 +47,7 @@ buttom_fav.forEach(buttom => {
         }else{
             buttom.style.backgroundColor = "black"; // Color diferente para el seleccionado
             buttom.style.fill = "white"; // Color diferente para el seleccionado
+            buttom.style.borderColor = "black";
         }
     });
 });
